@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --blue: #1f5a92;
+  --green: #357b58;
+  --copper: #b87333;
+  --charcoal: #222222;
+}
+
+html { scroll-behavior: smooth; }
+body {
+  background: #f7f8fa;
+  color: var(--charcoal);
+  -webkit-font-smoothing: antialiased;
+}
+::selection { background: var(--copper); color: #fff; }
+
+@layer components {
+  .container-x { @apply mx-auto w-full max-w-6xl px-5 sm:px-8; }
+  .btn { @apply inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition duration-300 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-copper; }
+  .btn-green { @apply bg-brand-green text-white hover:bg-brand-green-deep hover:-translate-y-0.5 shadow-soft; }
+  .btn-blue { @apply bg-brand-blue text-white hover:bg-brand-blue-deep hover:-translate-y-0.5 shadow-soft; }
+  .btn-white { @apply bg-white text-brand-blue hover:bg-brand-mist hover:-translate-y-0.5; }
+  .btn-ghost { @apply border border-white/60 text-white hover:bg-white/10; }
+  .eyebrow { @apply text-xs font-semibold uppercase tracking-[0.2em] text-brand-copper; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}
