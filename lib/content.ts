@@ -56,8 +56,8 @@ export const HOME = {
   },
   // Card carousel (5 cards in the mockup: Meet Paul, What's Keeping You Stuck?, What You Really Want, a 4th "...Tim[e]" card, +1)
   cardsIntro: {
-    title: "[Section title]", // TODO: Paul's final section title
-    intro: "[Optional one-line intro from Paul’s new copy]", // TODO
+    title: "Let’s start where you are", // Working title (Draft 1 phrasing). Swap for Paul's final wording.
+    intro: "You don’t need a new life. You want to show up as the dad you already know you can be.",
   },
   cards: [
     {
@@ -113,8 +113,8 @@ export const HOME = {
     { title: "Check in with yourself", text: "Note what worked, then build on it next week." },
   ],
   closing: {
-    headline: "[Closing headline]", // TODO: Paul's final closing headline
-    text: "[One or two low-pressure lines from Paul]", // TODO
+    headline: "Ready for your first small win?", // Draft 1 copy. Swap for Paul's final wording.
+    text: "Book a strategy call and let’s work out your next step together.",
     guideLink: "or get the free guide →",
   },
 };

@@ -25,8 +25,9 @@ const config: Config = {
       keyframes: {
         float: { "0%,100%": { transform: "translateY(0)" }, "50%": { transform: "translateY(-10px)" } },
         shimmer: { "100%": { transform: "translateX(100%)" } },
+        marquee: { "0%": { transform: "translateX(0)" }, "100%": { transform: "translateX(-50%)" } },
       },
-      animation: { float: "float 7s ease-in-out infinite" },
+      animation: { float: "float 7s ease-in-out infinite", marquee: "marquee 40s linear infinite" },
     },
   },
   plugins: [],
