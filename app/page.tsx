@@ -1,10 +1,23 @@
+import PageHero from "@/components/PageHero";
+import Section from "@/components/Section";
+import Reveal from "@/components/Reveal";
+import Button from "@/components/Button";
+import { CTA, HOME } from "@/lib/content";
+
+// Temporary page that proves the Step 2 components work. Replaced in Step 3.
 export default function Home() {
   return (
-    <main className="grid min-h-screen place-items-center bg-brand-blue text-white">
-      <div className="text-center">
-        <p className="eyebrow">Draft 2 · Step 1</p>
-        <h1 className="mt-3 text-4xl font-bold">Foundation is working.</h1>
-      </div>
-    </main>
+    <>
+      <PageHero eyebrow="Draft 2 · Step 2" title={HOME.hero.headline} subtitle={HOME.hero.body}>
+        <Button href="/free-guide" variant="green">{CTA.guide}</Button>
+      </PageHero>
+      <Section tone="paper">
+        <Reveal>
+          <p className="eyebrow">Components check</p>
+          <h2 className="mt-3 text-3xl font-bold text-brand-blue">Header, footer and animations are working.</h2>
+          <p className="mt-4 max-w-xl text-brand-charcoal/80">Scroll up and down. The copper bar at the top should fill as you scroll.</p>
+        </Reveal>
+      </Section>
+    </>
   );
 }

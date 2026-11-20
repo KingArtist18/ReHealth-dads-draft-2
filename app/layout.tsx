@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/Header";
+import Footer from "@/components/Footer";
+import ScrollProgress from "@/components/ScrollProgress";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,7 +24,12 @@ export const viewport: Viewport = { themeColor: "#1F5A92" };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body className="font-sans">{children}</body>
+      <body className="font-sans">
+        <ScrollProgress />
+        <Header />
+        <main id="main">{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }
